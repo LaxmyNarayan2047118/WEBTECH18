@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="grid.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+   <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,300italic' rel='stylesheet' type='text/css'>
+<title>myinfo</title>
+</head>
+<body>
+    <img src="https://cdn4.vectorstock.com/i/1000x1000/54/38/identification-card-icon-personal-info-data-icon-vector-28695438.jpg" alt="Workplace" usemap="#myinf" width="300" height="279">
+      <map name="myinf">
+      <area shape="rect" coords="34,44,270,350"  href="chessindex.html">
+    </map>
+    <canvas id="myinfo1"  style="border:1px solid #01410a;background-color: #83f892; border-radius: 3rem; width:20rem; height:20rem ; align-items:inherit; ">
+        Your browser does not support the HTML canvas tag.</canvas>
+        <button class="btn btn-full" onclick="myinfo2()"> Click To Fill </button>
+    <img src="https://i.pinimg.com/236x/3c/4f/18/3c4f1886e5b1d47f3126703fd20f56b7.jpg"  id="im" style="display: none;">
+    <script>
+       function myinfo2() {
+  var canv = document.getElementById("myinfo1");
+  var contxt = canv.getContext("2d");
+  var img = document.getElementById("im");
+  contxt.drawImage(img,50,15);
+}</script>
+</body>
+</html>

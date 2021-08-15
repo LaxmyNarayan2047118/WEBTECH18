@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Amazon Books</title>
+       
+    </head>
+    <body>
+        <header>
+            <div class="amz-header">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthewordbite.files.wordpress.com%2F2017%2F06%2Fc41.jpg&f=1&nofb=1" alt="" class="amazon">
+            </div>
+        </header>
+        <div class="content">
+            <aside>
+               
+                <ul>
+                    <li id="adk"   onclick="a()">Add Books</li>
+                    <li  id ="vbk"  onclick="v()">View Books</li>
+                    <li id ="ln"  onclick="l()">login</li>
+                </ul>
+    
+            </aside>
+            <main>
+                <div>
+                    <h1 style="text-transform: capitalize;">Welcome to amazon books</h1>
+                </div>
+                <div class="view-books" style="display: grid;">
+
+                     <div class="bkimg">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/I/51KSK8Jm95L._SX198_BO1,204,203,200_QL40_FMwebp_.jpg">
+                    </div>
+                    <div class="bkimg">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/I/51j9meEUKwL._SX198_BO1,204,203,200_QL40_FMwebp_.jpg">
+                    </div>
+                    <div class="bkimg">
+                        <img src="https://m.media-amazon.com/images/I/71K9b50E4YL._AC_UY218_.jpg">
+                    </div>
+                    <div class="bkimg">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/I/518pkFFlFsL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg">
+                    </div>
+                </div>
+                <div class="addbooks"  style="display: none;">
+                    <h1>You can add Books here.</h1>
+                    <form class="form">
+                        <div>  
+                            <p>Enter the Title of the Book</p>  
+                           
+                            <label style="text-indent: -1rem;" for="title">Title</label>
+                            <input type="text"  name="title">
+                            
+                        </div>
+                    <div>
+                        <p style="text-indent: -1rem;">Available on Kindle</p>
+                        <input type="radio">
+                        <label for="kindle">Yes</label>
+                        <input type="radio">
+                        <label for="kindle">No</label>
+                    </div>
+                    <div class="lang">
+                        <p style="text-transform:capitalize;"> Available in  Language</p>
+                        <label>English</label>
+                        <input type="checkbox" name="English">
+                        <label>Hindi</label>
+                        <input type="checkbox" name="Hindi">
+                        <label>Tamil</label>
+                        <input type="checkbox" name="Tamil">
+                        <label>Telagu</label>
+                        <input type="checkbox" name="Telagu">
+                        <label>Kannada</label>
+                        <input type="checkbox" name="Kannada">
+                     </div>
+                     <div>
+                         <p style="text-indent: -1rem; text-transform: capitalize;">Select The Category</p>
+                         <select name="categ">
+                            <option selected>None</option>
+                             <option>Fantasy</option>
+                             <option>Classics</option>
+                             <option>Comics</option>
+                             <option>Horror</option>
+                            
+                         </select>
+                     </div>
+                     <div>
+                        <p style="text-indent: -1rem; text-transform: capitalize;">Release date</p>
+                        <label for="date">Pick Date</label>
+                        <input type="date" name="reldate">
+                     </div>
+                      <div>
+                          <button class="sb" type="submit">Add</button>
+                      </div>
+                    </form>
+                    
+                </div>
+                    <div class="login"  style="display: none;">
+
+                        <form class="form">
+                            <div>  
+                                <h1>Enter Username And Password</h1>  
+                               
+                                <label  for="Username">Username</label>
+                                <input type="text"  name="Username"><br>
+                                <label  for="Password">Password</label>
+                                <input type="password"  name="Password"><br>
+                                <button  class="sb" type="submit">login</button>
+                                
+                            </div>
+                         </form>
+                    </div>
+    
+               
+
+        </div>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>
