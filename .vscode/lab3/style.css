@@ -1,7 +1,7 @@
 html
 {
     
-        background-color: #fff;
+        background-color: rgb(240, 176, 123);
         color: rgb(36, 35, 35);
         font-family: 'Lato', 'Arial', sans-serif;
         font-weight: 300;
@@ -25,6 +25,7 @@ body{
     margin: 0;
     background-color: rgb(0, 0, 0);
 
+
 }
 .amazon{
     margin: 0 30%;
@@ -38,7 +39,7 @@ h1{
     text-transform: capitalize;
 }
 main{
-    margin: 1px auto;
+    margin: 0 3px ;
     width: 100%;
     height: auto;
     padding: 1rem;
@@ -46,6 +47,7 @@ main{
     border: 1px solid orangered;
     text-align: center;
     box-shadow: 0 5px 12px rgb(151, 117, 55);
+    border-radius: 50px;
 }
 
 input{
@@ -66,12 +68,13 @@ margin: 0;
 }
 
 aside{
-    margin: 1px;
+    margin: 0 3px;
     background:linear-gradient(45deg, orangered,orange,yellow);
     float: left;
     width:310px;
     height: 100vh;
     border: 2px solid orangered;
+    border-radius: 50px;
     box-shadow: 0 10px 12px rgb(32, 14, 32) ;
 }
 ul{
@@ -81,9 +84,9 @@ ul{
 }
 aside li{
     display: block;
-    margin: 3px 0;
-    padding: 25px;
-    font-size: 30px;
+    margin: 3px 1px;
+    padding: 20px;
+    font-size: 24px;
     text-decoration: none;
     text-align: center;
     cursor: pointer;
@@ -114,6 +117,7 @@ input[ type="date"]{
    
     border-radius: 25px;
     width: 25%;
+    height: 20%;
     border-color: orangered;
 }
 .sb:hover{
