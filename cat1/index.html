@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,300italic' rel='stylesheet' type='text/css'>
+        <title>LN TOURIST SERVICE</title>
+       
+    </head>
+    <body>
+        <header>
+            <div class="amz-header">
+             <p style="color:#ffff; text-transform: capitalize; margin-top: 0%; text-align: center; font-weight: 400; font-size: 85px;">Welcome to LN tourist service</p>
+            </div>
+        </header>
+        <div class="content">
+            <aside>
+               
+                <ul>
+                    <li id="adk" onclick="a()"> Register</li>
+                    <li id ="ln" onclick="l()">login</li>
+                    <li  id ="vbk"onclick="v()">View Places</li>
+                
+                </ul>
+    
+            </aside>
+            <main>
+               
+                <div class="view-books" style="display: grid;">
+                     <div class="bkimg">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzwrCB3yP2I647YjVTktd1et34osyVOVDGZvP5M5-lgIlhAwpvx4dbeeWdImjfi3xWI2g&usqp=CAU" height="100%" width="100%">
+                        <map name="myinf">
+                            <area shape="rect" coords="34,44,270,350"  href="#Taj">
+                          </map> 
+                    </div>
+                    <div class="bkimg">
+                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8BnRALs2Mn1uNJ-cVcLRLtAA0LEVz2IbS2PVCI-yRSl8LSLsk2kJIHB0GV8_WQaRXJAY&usqp=CAU"height="100%" width="100%">
+                       <map name="myinf">
+                        <area shape="rect" coords="34,44,270,350"  href="#lotus">
+                      </map>
+                    </div>
+                    <div class="bkimg">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu0VABn4jHoAUNnlay_frcKQp3kfNPIg6_W-RD4krLYDMSYIZP20oSgXsZtRKoIDxQJl8&usqp=CAU"height="100%" width="100%">
+                        <map name="myinf">
+                            <area shape="rect" coords="34,44,270,350"  href="#pondi">
+                          </map>
+                    </div>
+                    <div class="bkimg">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaAkjr_uPnI3wDktpRcPp6KPPD5mtfY9Lu1w3OEt4DfFKjUxHYR83SFB01yAmtsDZYius&usqp=CAU"height="100%" width="100%">
+                        <map name="myinf">
+                            <area shape="rect" coords="34,44,270,350"  href="#Goa">
+                          </map>
+                    </div>
+                    <div class="bkimg">
+                     <p  class ="Taj"heigh="100%" width="100%">An immense mausoleum of white marble, built in Agra between 1631 and 1648 by order of the Mughal emperor Shah Jahan in memory of his favourite wife, the Taj Mahal is the jewel of Muslim art in India and one of the universally admired masterpieces of the world's heritage.</p>  
+                     </div>
+                    <div class="bkimg">
+                      
+                        <p class ="Lotus"heigh="100%" width="100%">The Lotus Temple, located in Delhi, India, is a Baháʼí House of Worship that was dedicated in December 1986. Notable for its flowerlike shape, it has become a prominent attraction in the city. Like all Houses of Worship, the Lotus Temple is open to all, regardless of religion or any other qualification.</p>  
+                    </div>
+                    <div class="bkimg">
+                        <p  class ="pondi" heigh="100%" width="100%">Pondicherry (or Puducherry), a French colonial settlement in India until 1954, is now a Union Territory town bounded by the southeastern Tamil Nadu state. Its French legacy is preserved in its French Quarter, with tree-lined streets, mustard-colored colonial villas and chic boutiques</p>  
+                        
+                    </div>
+                    <div class="bkimg">
+                        <p  class ="Goa" heigh="100%" width="100%">Goa is a state in western India with coastlines stretching along the Arabian Sea. Its long history as a Portuguese colony prior to 1961 is evident in its preserved 17th-century churches and the area’s tropical spice plantations. Goa is also known for its beaches, ranging from popular stretches at Baga and Palolem to those in laid-back fishing villages such as Agonda</p>  
+                    </div>
+                </div>
+                <div class="addbooks"  style="display: none;">
+                    <h1>You can Register here.</h1>
+                    <form class="form">
+                        <div> 
+                            <label style="text-indent: -1rem;" for="title">NAME</label>
+                            <input type="text"  name="title">
+                            
+                        </div>
+                        <div> 
+                            <label style="text-indent: -1rem;" for="title">EMAIL <ADDress></ADDress></label>
+                            <input type="text"  name="title">
+                            
+                        </div>
+                    <div>
+                        <p style="text-indent: -1rem;">GENDER</p>
+                        <input type="radio">
+                        <label for="kindle">MALE</label>
+                        <input type="radio">
+                        <label for="kindle">FEMALE</label>
+                    </div>
+                     <div>
+                         <p style="text-indent: -1rem; text-transform: capitalize;">Select The Places</p>
+                         <select name="categ">
+                            <option selected>None</option>
+                             <option>Agra</option>
+                             <option>Delhi</option>
+                             <option>Pondicherry</option>
+                             <option>Goa</option>
+                            
+                         </select>
+                     </div>
+                     <div>
+                        <p style="text-indent: -1rem; text-transform: capitalize;">DATE</p>
+                        <label for="date">Pick Date</label>
+                        <input type="date" name="reldate">
+                     </div>
+                      <div>
+                          <button class="sb" type="submit">Register</button>
+                      </div>
+                      <div>
+                          <div class="sb"  id="demo" onclick="getLocation()">Help us get your getLocation</div>
+                      </div>
+                    </form>
+                    
+                </div>
+                    <div class="login"  style="display: none;">
+                        <object data="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" style="height: 250px; width: 250px;"></object>
+
+                        <form class="form">
+                            <div>  
+                                <h1>Enter Username And Password</h1>  
+                               
+                                <label  for="Username">Username</label>
+                                <input type="text"  name="Username"><br>
+                                <label  for="Password">Password</label>
+                                <input type="password"  name="Password"><br>
+                                <button  class="sb" type="submit">login</button>
+                                
+                            </div>
+                        </form>
+                         
+                        
+                        </div>
+
+    
+               
+
+        </div>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>
