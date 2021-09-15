@@ -1,0 +1,72 @@
+<?xml version = "1.0"?>
+<!--ForexTraders.xml-->
+<!DOCTYPE currency SYSTEM "currency.dtd">
+<Traders>
+<Client>
+<name>
+<firstname> James </firstname>
+<lastname> Smith </lastname>
+</name>
+<address>
+<street> 101 South Street</street>
+<city> Halifax </city>
+<email> james@dal.ca </email>
+<phone> 4940001 </phone>
+</address>
+<currency>
+<Cname>US DOLLARS
+</Cname>
+</currency>
+</Client>
+
+<Client>
+<name>
+<firstname> Tom </firstname>
+<lastname> White </lastname>
+</name>
+<address>
+<street> 202 Victoria Road </street>
+<city> Dartmouth </city>
+<email> tom@dal.ca</email>
+<phone> 4940002 </phone>
+</address>
+<currency>
+<Cname>AUS DOLLARS
+</Cname>
+</currency>
+</Client>
+
+<Client>
+<name>
+<firstname> laxmy </firstname>
+<lastname> Narayan </lastname>
+</name>
+<address>
+<street> 202 Victoria Road </street>
+<city> Dartmouth </city>
+<email> tom@dal.ca</email>
+<phone> 4940002 </phone>
+</address>
+<currency>
+<Cname>Yen
+</Cname>
+</currency>
+</Client>
+
+<Client>
+<name>
+<firstname> Raj </firstname>
+<lastname> Kumar </lastname>
+</name>
+<address>
+<street> 202 Victoria Road </street>
+<city> Dartmouth </city>
+<email> tom@dal.ca</email>
+<phone> 4940002 </phone>
+</address>
+<currency>
+<Cname> Canadian DOLLARS
+</Cname>
+</currency>
+</Client>
+</Traders>
