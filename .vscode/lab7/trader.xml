@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<traders>
+<companyname>LN Traders Inc.</companyname>
+ <trader>
+  <id>101</id>
+  <name>Ram</name>
+  <designation>Manager</designation>
+ </trader>
+
+ <trader>
+  <id>102</id>
+  <name>Prabhu</name>
+  <designation>Executive</designation>
+ </trader>
+
+ <trader>
+  <id>103</id>
+  <name>John</name>
+  <designation>Executive</designation>
+ </trader>
+</traders>

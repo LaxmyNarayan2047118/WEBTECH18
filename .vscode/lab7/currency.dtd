@@ -1,0 +1,14 @@
+<?xml version = "1.0"?>
+<!--currency.dtd-a document type definition for the currency.xml-->
+<!ELEMENT Traders (Client+)>
+<!ELEMENT Client (name,address,currency)>
+<!ELEMENT name (firstname,lastname)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT address (street,city,email,phone)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT Client (Cname)>
+<!ELEMENT Cname (#PCDATA)>
