@@ -1,0 +1,30 @@
+<?xml version = "1.0"?>
+<!-- christ3.xml for the CSS -->
+<?xml-stylesheet type="text/css" href= "christ.css"?>
+<Christ>
+<cs>
+<Stu-name>laxmy narayan</Stu-name>
+<Stu-branch>Computer Science</Stu-branch>
+<Stu-college>Christ university</Stu-college>
+<Stu-email>Laxmy.narayan@cs.christUniversity.in</Stu-email>
+</cs>
+  <cs>
+<Stu-name>Raj Kumar</Stu-name>
+<Stu-branch>Computer Science</Stu-branch>
+<Stu-college>Christ university</Stu-college>
+<Stu-email>raj.kumar@cs.christUniversity.in</Stu-email>
+</cs>
+  <cs>
+<Stu-name>Tejas v kashyap</Stu-name>
+<Stu-branch>Computer Science</Stu-branch>
+<Stu-college>Christ university</Stu-college>
+<Stu-email>tejas.v@cs.christUniversity.in</Stu-email>
+</cs>
+  <cs>
+<Stu-name>rahul singh</Stu-name>
+<Stu-branch>Computer Science</Stu-branch>
+<Stu-college>St josephs</Stu-college>
+<Stu-email>rahul.singh@stjoseph.in</Stu-email>
+</cs>
+  
+</Christ>
