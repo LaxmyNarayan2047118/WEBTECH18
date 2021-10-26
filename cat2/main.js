@@ -5,12 +5,35 @@ const confirmPasswordEl = document.querySelector('#confirm-password');
 const chk = document.getElementById("choice-yes");
 const url1=document.querySelector('#url');
 const form = document.querySelector('#signup');
+const age1 = document.querySelector('#age');
+const brn = document.querySelector('#branch');
+const clg = document.querySelector('#college');
+const ph = document.querySelector('#phoone');
+const state = document.querySelector('#state');
+const addr = document.querySelector('#adress');
 
 
+
+const checkAge =() => {
+
+     let age = age1.value;
+    let valid = false;
+    age = parseInt(age,10);
+    if (!isRequired(age)) {
+        showError(age1, 'Age cannot be blank.');
+    }else if (isNaN(age) || age < 1 || age > 100){
+        showError(age1,'Age should not be less than 1 or more than 100');
+    }
+    else {
+        showSuccess(age1);
+        valid = true;
+    }
+    return valid;
+};
 
 
 const checkUsername = () => {
-
+   
     let valid = false;
 
     const min = 3,
@@ -20,14 +43,19 @@ const checkUsername = () => {
 
     if (!isRequired(username)) {
         showError(usernameEl, 'Username cannot be blank.');
-    } else if (!isBetween(username.length, min, max)) {
-        showError(usernameEl, `Username must be between ${min} and ${max} characters.`)
+        emailEl.disabled = true;
+        showError(usernameEl,"First letter of the username must be uppercase!");
+        emailEl.disabled = true;
+    }
+    else if (!isBetween(username.length, min, max)) {
+        showError(usernameEl, `Username must be between ${min} and ${max} characters.`);
+        emailEl.disabled = true;
     } else {
         showSuccess(usernameEl);
         valid = true;
-    }
+        emailEl.disabled = false;
     return valid;
-};
+}};
 
 
 const checkEmail = () => {
@@ -35,10 +63,15 @@ const checkEmail = () => {
     const email = emailEl.value.trim();
     if (!isRequired(email)) {
         showError(emailEl, 'Email cannot be blank.');
+        brn.disabled = true;
+       
+        
     } else if (!isEmailValid(email)) {
-        showError(emailEl, 'Email is not valid.')
+        showError(emailEl, 'Email is not valid.');
+        brn.disabled = true;
     } else {
         showSuccess(emailEl);
+        brn.disabled = false;
         valid = true;
     }
     return valid;
@@ -52,11 +85,14 @@ const checkPassword = () => {
 
     if (!isRequired(password)) {
         showError(passwordEl, 'Password cannot be blank.');
+        confirmPasswordEl.disabled = true;
     } else if (!isPasswordSecure(password)) {
         showError(passwordEl, 'Password must has at least 8 characters that include at least 1 lowercase character, 1 uppercase characters, 1 number, and 1 special character in (!@#$%^&*)');
+        confirmPasswordEl.disabled = true;
     } else {
         showSuccess(passwordEl);
         valid = true;
+        confirmPasswordEl.disabled = false;
     }
 
     return valid;
@@ -84,6 +120,7 @@ const checkTerms = () => {
     let valid = false;
     if (chk.checked === true) {
        showSuccess(chk);
+
        valid = true;
     } else {
         showError(chk,"Not Checked!");
@@ -104,6 +141,7 @@ const checkUrl = () => {
     }
     return valid;
 };
+
  
 
 const isEmailValid = (email) => {
@@ -118,6 +156,10 @@ const isUrlValid = (url) => {
 const isPasswordSecure = (password) => {
     const re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
     return re.test(password);
+};
+const  isUsernameValid =(username) => {
+    const re = /[A-Z]/;
+    return re.test(username.charAt(0));
 };
 
 const isRequired = value => value === '' ? false : true;
@@ -147,9 +189,17 @@ const showSuccess = (input) => {
     // hide the error message
     const error = formField.querySelector('small');
     error.textContent = '';
-}
+};
 
+// function createCookie(){
+//    today = new Date();
+//   var expire = new Date();
+//   expire.setTime(today.getTime() + 3600000*24*15);
+ 
 
+//   document.cookie = "name="+usernameEl.value+";path=/" + ";expires="+expire.toUTCString();
+//   document.cookie = "password="+encodeURI(passwordEl.value)+";path=/" + ";expires="+expire.toUTCString();
+// }; 
 form.addEventListener('submit', function (e) {
     // prevent the form from submitting
     e.preventDefault();
@@ -158,20 +208,23 @@ form.addEventListener('submit', function (e) {
     let isUsernameValid = checkUsername(),
         isEmailValid = checkEmail(),
         isPasswordValid = checkPassword(),
-        isConfirmPasswordValid = checkConfirmPassword();
-        ischeckternvalid = checkTerms();
-        isUrlValid = checkUrl();
+        isConfirmPasswordValid = checkConfirmPassword(),
+        ischeckternvalid = checkTerms(),
+        isUrlValid = checkUrl(),
+        isCheckAgeValid = checkAge();
+        // createCookie = createCookie();
 
     let isFormValid = isUsernameValid &&
         isEmailValid &&
         isPasswordValid &&
         isConfirmPasswordValid &&
         ischeckternvalid &&
-        isUrlValid;
+        isUrlValid && 
+        isCheckAgeValid;
 
     // submit to the server if the form is valid
     if (isFormValid) {
-
+       alert("form successfully submitted");
     }
 });
 
@@ -210,5 +263,8 @@ form.addEventListener('input', debounce(function (e) {
         case 'url':
             checkUrl();
             break;    
+        case 'age':
+            checkAge();
+            break;
     }
 }));
